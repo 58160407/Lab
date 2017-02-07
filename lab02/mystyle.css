@@ -1,0 +1,186 @@
+
+<style>
+
+@font-face{ 
+    font-family: 'RaiNgan';
+    src: url('RaiNgan.eot');
+    src: url('RaiNgan.eot?#iefix') format('embedded-opentype'),
+         url('RaiNgan.woff') format('woff'),
+         url('RaiNgan.ttf') format('truetype'),
+         url('RaiNgan.svg#webfont') format('svg');
+}
+</style>
+
+#li{
+    width: 80%;
+
+}
+
+body{
+    background-image: url("image/symphony.png")
+}
+
+
+h1{
+    font-family:RaiNgan;
+    font-size: 35;
+    text-align: center;
+    background-color:#6d6860;
+    color: white; 
+    border: 3px solid #ffa990;
+    border-style: groove 20px;
+}
+
+#tablelab02{
+    width: 90%;
+    
+}
+
+.trclass{
+    background-color: #6d6860;
+    font-weight: bold;
+	font-family:RaiNgan;
+    font-size: 50;
+	width: 170;
+	height: 100;
+    text-align: center;
+    color:white;
+    
+}
+
+.tdclass{
+   background-color:#6d6860;
+   font-family:RaiNgan;
+   font-size: 50; 
+   text-align: center;
+   color: white;
+}
+
+.trclass1{
+    background-color: #ffa990;
+	font-family:RaiNgan;
+    font-size: 50;
+	width:170;
+	height: 200;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    font-family:RaiNgan;
+    font-size: 35;
+    text-align: center;
+    background-color:#6d6860;
+    color: white; 
+    border: 3px solid #ffa990;
+    border-style: groove 20px;
+}
+
+.trclass3{
+    background-color: #ffa990;
+	font-family:RaiNgan;
+    font-size: 50;
+	width:150;
+	height: 70;
+    text-align: center;
+    color: white;
+}
+
+h3{
+    font-family:RaiNgan;
+    font-size: 35;
+    text-align: center;
+    background-color:#6d6860;
+    color: white; 
+    border: 3px solid #ffa990;
+    border-style: groove 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;;
+    background-color: #6d6860;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    font-weight: bold;
+    font-family:RaiNgan;
+    font-size: 20;
+    color: #8b7a5c;
+    text-align: center;  
+    padding: 24px 26px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    background-color:#ffa990;
+}
+
+.active {
+background-color:#ffa990;
+}
+
+
+div.imgpic {
+    border: 1px solid #ccc;
+}
+
+div.imgpic:hover {
+    border: 1px solid #777;
+}
+
+div.imgpic img {
+    width: 100%;
+    height: 50%;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.ggg {
+    padding:6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .ggg {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .ggg {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.imgpic {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.imgpic:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
