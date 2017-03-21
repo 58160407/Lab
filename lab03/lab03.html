@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<bg color="#cc9966">
+  <title>Home Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #ffff88;
+      height: 100%;
+    }
+    .sidenav1 {
+      background-color: #FAFA96;
+      height: auto;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #ffee44;
+      color: white;
+      padding: 15px;
+    }
+   
+
+
+.num {
+      font-size: 15px; 
+      color: #2E8B57;
+       }
+
+    .green {
+      font-size: 15px;
+      color: #006600;
+      font-weight:bold;
+    }
+
+    .blue {
+      color: #003366;
+      font-size: 15px; 
+    }
+
+    .red {
+      color: #CC0000;
+      font-size: 15px; 
+    }
+
+    .headkor {
+      color: #FF0033;
+      font-size: 18px; 
+      font-weight:bold;
+      text-align:center;
+
+    }
+     .text {
+      color: -;
+      font-size: 18px; 
+    }
+
+    .image-center {
+      text-align: center;
+      font-size: 14px;
+      font-style:italic;
+    }
+
+
+    /* Set Text H */
+    .h1 {
+      color: #0000CD;
+      font-weight:bold;
+      text-align:center;
+     }
+     .h3 {
+      color: #CD1039;
+      font-weight:bold;
+     }
+ 
+    .aa {
+       color: #5a5a5a;
+       font-size: 18px;
+      
+    }
+
+
+    
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Patinya's Blog</h4>
+       <h4>58160407</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/lab03.html">Home</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/grid.html">การใช้งาน Grid</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/form.html">การใช้งาน Form </a></li>
+       
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>WEB PROGRAMMING</small></h4>
+      <hr>
+      <h2><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/grid.html">การใช้งาน Grid ใน Bootstrap</a></h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Patinya Rueangrit, Feb 06, 2017.</h5>
+      <h5><span class="label label-danger">Bootstrap</span> <span class="label label-success">Grid</span> <span class="label label-success">Form</span></h5><br>
+
+      <h4><code class="headkor">Grid คืออะไร ?</code></h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จริงๆ แล้วถ้าให้พูดถึง Bootstrap ก็คงจะขาดเรื่องของ Layout หรือ Grid System ไปไม่ได้เลย ในความเป็นจริงเรื่องนี้ควรที่จะทำความเข้าใจก่อนใช้งาน Bootstrap เสียด้วยซ้ำ บทความนี้จะพูดถึงเรื่องของ Grid System และ Box model ของ CSS ด้วย ซึ่งจะทำให้ผู้อ่านเข้าใจ และ ปรับนำมาใช้กับงานได้อย่างง่ายขึ้น ทั้งนี้เองผู้เขียนแนะนำให้เปิดคู่มือของ Bootstrap ดูควบคู่ไปด้วยเช่นกันที่ <a href="http://getbootstrap.com/css/#grid">http://getbootstrap.com/css/#grid</a> บทความนี้เราจะพูดถึง Grid System ของ Bootstrap</p>
+      <br>
+      <a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/grid.html">อ่านต่อ ..</a>
+
+      <br><br>
+      
+      <h4><small>WEB PROGRAMMING</small></h4>
+      <hr>
+      <h2><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/form.html">การใช้งาน Form</a></h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Patinya Rueangrit, Feb 06, 2017.</h5>
+      <h5><span class="label label-success">Lorem</span></h5><br>
+      <h4><code class="headkor">Form คืออะไร ?</code></h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การใช้ CSS เพื่อกำหนดรูปแบบต่างๆ ให้กับคอนโทรลต่างๆ ของฟอร์มในเอกสารนั้น Bootstrap มี
+คลาสที่หลากหลายที่จะช่วยให้เราสามารถปรับปต่างคอนโทรลต่างๆ ของฟอร์มให้ดูสวยงาม และ
+น่าใช้งานมากยิ่งขึ้น โดยเราสามารถใช้คลาสต่างๆ ได้กับแท็ก < input >, < textarea > และ < select >
+โดยเราต้องทำการเพิ่มคลาส .form-control ให้กับคอนโทรลเหล่านั้น โดยความกว้างของคอนโทรล
+นั้นจะกว้าง 100% เป็นค่าเริ่มต้น แต่เราสามารถกำหนดค่าความกว้างให้เป็นตามที่เราต้องการได้
+โดยการใช้สไตล์ซีท style="width: XXXpx;" และใช้งานร่วมกับ Grid ได้โดยความกว้างจะได้ขนาด
+เท่ากับขนาดของ Grid ตัวอย่างฟอร์ม</p>
+
+  <br>
+      <a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/form.html">อ่านต่อ ..</a>
+      <hr>
+
+
+
+
+
+
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="img/karnz.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Karnz Marii <small>Feb 07, 2017, 9:12 PM</small></h4>
+          <p>ว้าววว!! สุดยอดจริงๆ เป็นความรู้มากๆเลย</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="img/petong.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Petong123 <small>Feb 07, 2017, 8:25 PM</small></h4>
+          <p>พอจะมีเวลาว่างสัก 2-3 ชม. ต่อวันมั้ยครับ...<br>
+          <br>
+          รู้จักใครที่เล่น อินเตอร์เน็ตวันละ 2-3 ชั่วโมงขึ้นไปต่อวันบ้างมั้ยเอ่ย? <br>ตอนนี้ขาดคนช่วยโปรโมทเว็ปให้บริษัท ไม่จำกัดเวลาในการทำงาน<br> รายได้จะขึ้นอยู่กับเวลาในการทำงานจริง ...<br>รับบุคคลอายุ18ปีขึ้นไป.... รายได้จะโอนเข้าบัญชีส่วนตัว<br>
+          ______***รับจำนวนจำกัด***______<br>
+สนใจและต้องการรายละเอียดเพิ่มทิ้งชื่อ+เบอร์โทรศัพไว้นะครับ
+เดี๋ยวเจ้าหน้าที่ติดต่อกลับเพื่อให้ข้อมูลครับ
+</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="img/bai.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Bai'toey  <small>Feb 07, 2017, 8:28 PM</small></h4>
+              <p>สนใจค่ะ ติดต่อได้ทางไหนคะ??</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <center><p>● ►Patinya Rueangrit 58160407◄ ●</p></center>
+</footer>
+
+</body>
+</html>
+

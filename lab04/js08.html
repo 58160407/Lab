@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Image rollover</title>
+<script language=JavaScript>
+	 function highlightdocs() {
+            if (document.images) {
+                document.images['docs'].src = docsOn.src;
+            }
+        }
+
+        function unhighlightdocs() {
+            document.images['docs'].src = docsOff.src;
+        }
+        if (document.images) {
+            docsOn = new Image();
+            docsOn.src = "img/hrk_color.png";
+            docsOff = new Image();
+            docsOff.src = "img/hrk_gray.png";
+        }
+	
+</script>
+</head>
+<body>
+<p><A HREF="https://www.google.co.th/
+?gws_rd=cr&ei=pJygWIuNLovevASJkKHADA" onMouseOver="highlightdocs()" onMouseOut="unhighlightdocs()">
+<img src="img/hrk_gray.png" name="docs" height="60" width="100" border="0">
+</A></p>
+
+</body>
+</html>

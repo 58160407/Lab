@@ -1,0 +1,23 @@
+<HTML>
+<HEAD><TITLE>re-direct based upon window size</TITLE>
+</HEAD>
+<BODY>
+<SCRIPT language=JavaScript>
+function windowHeight( ) {
+	if (document.body && document.body.clientHeight) { //test for IE
+		return document.body.clientHeight;
+	} else if (window.innerHeight){ //test for NS
+		return window.innerHeight;
+	} else {
+		return 0;
+	} //both tests have failed
+}	
+
+if (windowHeight() >= 300) {
+	document.location = "lab04.html";	
+} else {
+	document.location = "http://angsila.cs.buu.ac.th/~58160407/887371/lab04/";
+}
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<bg color="#cc9966">
+  <title>Forms Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+   /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #ffff88;
+      height: 100%;
+    }
+     
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #ffee44;
+      color: white;
+      padding: 15px;
+    }
+
+.num {
+      font-size: 15px; 
+      color: #2E8B57;
+       }
+
+    .green {
+      font-size: 15px;
+      color: #006600;
+      font-weight:bold;
+    }
+
+    .blue {
+      color: #003366;
+      font-size: 15px; 
+    }
+
+    .red {
+      color: #CC0000;
+      font-size: 15px; 
+    }
+
+    .headkor {
+      color: #FF0033;
+      font-size: 18px; 
+      font-weight:bold;
+      text-align:center;
+
+    }
+     .text {
+      color: -;
+      font-size: 18px; 
+    }
+    .image-center {
+      text-align: center;
+      font-size: 14px;
+      font-style:italic;
+    }
+
+   
+
+    /* Set Text H */
+    .h1 {
+      color: #0000CD;
+      font-weight:bold;
+      text-align:center;
+     }
+     .h3 {
+      color: #CD1039;
+      font-weight:bold;
+     }
+ 
+    .aa {
+       color: #5a5a5a;
+       font-size: 18px;
+     
+    }
+
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Patinya's Blog</h4>
+       <h4>58160407</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/lab03.html" >Home</a></li>
+        <li ><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/grid.html" >การใช้งาน Grid</a></li>
+        <li class="active"><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/form.html" >การใช้งาน Form </a></li>
+       
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>WEB PROGRAMMING</small></h4>
+      <hr>
+      <h2>การใช้งาน Form </h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Patinya Rueangrit, Feb 06, 2017.</h5>
+      <h5><span class="label label-danger">Form</span> <span class="label label-primary">Bootstrap</span></h5><br>
+
+
+       <p><h3>◉ &nbsp; Bootstrap Forms &nbsp; ◉</h3><br>
+      
+     
+      <h4> ► &nbsp; ฟอร์ม (Form)</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การใช้ CSS เพื่อกำหนดรูปแบบต่างๆ ให้กับคอนโทรลต่างๆ ของฟอร์มในเอกสารนั้น Bootstrap มี
+คลาสที่หลากหลายที่จะช่วยให้เราสามารถปรับปต่างคอนโทรลต่างๆ ของฟอร์มให้ดูสวยงาม และ
+น่าใช้งานมากยิ่งขึ้น โดยเราสามารถใช้คลาสต่างๆ ได้กับแท็ก < input >, < textarea > และ < select >
+โดยเราต้องทำการเพิ่มคลาส .form-control ให้กับคอนโทรลเหล่านั้น โดยความกว้างของคอนโทรล
+นั้นจะกว้าง 100% เป็นค่าเริ่มต้น แต่เราสามารถกำหนดค่าความกว้างให้เป็นตามที่เราต้องการได้
+โดยการใช้สไตล์ซีท style="width: XXXpx;" และใช้งานร่วมกับ Grid ได้โดยความกว้างจะได้ขนาด
+เท่ากับขนาดของ Grid ตัวอย่างฟอร์ม</p>
+<h4><code class="headkor">ตัวอย่างการสร้างฟอร์ม</code></h4> <br>
+<footer class="container-fluid">
+ <div><pre class="html" >
+  <code class="num">1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;form</code> <code class="blue">role=</code><code class="red">"form"</code><code class="green">&gt;</code>
+  <code class="num">2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">3</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_email"</code><code class="green">&gt;</code>Email address<code class="green">&lt;/label&gt;</code>
+  <code class="num">4</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"email"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">5</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">id=</code><code class="red">"txt_email"</code> <code class="blue">placeholder=</code><code class="red">"Enter email"</code><code class="green">&gt;</code>
+  <code class="num">6</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">7</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">8</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_pass"</code><code class="green">&gt;</code>Password<code class="green">&lt;/label&gt;</code>
+  <code class="num">9</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"password"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">10</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">id=</code><code class="red">"txt_pass"</code> <code class="blue">placeholder=</code><code class="red">"Password"</code><code class="green">&gt;</code>
+  <code class="num">11</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">12</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;button</code> <code class="blue">type=</code><code class="red">"submit"</code> <code class="blue">class=</code><code class="red">"btn btn-default"</code><code class="green">&gt;</code>
+  <code class="num">13</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Submit
+  <code class="num">14</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/button&gt;</code>
+  <code class="num">15</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/form&gt;</code></pre></div>
+  </footer>
+<br>
+<h4>ผลลัพธ์ที่ได้ ดังรูป</h4>
+<div class="image-center">
+ <img src="img/4.png" >
+ </div>
+<br><br><br>
+
+<h4><code class="headkor">Inline form</code></h4> <br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การกำหนดรูปแบบ inline form เป็นการทำให้คอนโทรลต่างๆ ของฟอร์มอยู่ในแถวเดียวกัน โดย
+โดยปกติแล้วหากเราไม่กำหนดค่า .form- inline ในแท็ก < form > คอนโทรลต่างๆ ของฟอ์มจะอยู่
+คนละแถว หรือคนละบรรทัด เหมือนกับตัวอย่างแรก แต่หากเรากำหนดค่า .form- inliine เข้าไป
+คอนโทรลต่างๆ จะอยู่ในแถวเดียวกัน ในการทำ inline form นั้นเราจะต้องทำการกำหนดค่าความ
+กว้างของคอนโทรล โดยการใช้สไตล์ซีทกำหนดค่า ซึ่งตัวอย่างจะใช้width ในการกำหนดค่าความ
+กว้างของคอนโทรล หากเราไม่กำหนดเบราเซอร์จะแสดงความกว้างเต็ม 100% ซึ่งจะไม่เห็นความ
+แตกต่างในการใช้.form-inlineและหากเราไม่ต้องการให้แสดง < label > เราสามารถกำหนดคลาส.sr-only
+ให้กับ < label > ได้ ตัวอย่างการใช้งาน
+</p>
+
+
+
+<footer class="container-fluid">
+ <div><pre class="html" >
+  <code class="num">1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;form</code> <code class="blue">role=</code><code class="red">"form"</code> <code class="blue">class=</code><code class="red">"form-inline"</code><code class="green">&gt;</code>
+  <code class="num">2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_email"</code><code class="green">&gt;</code>Email<code class="green">&lt;/label&gt;</code>
+  <code class="num">3</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"email"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">4</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">style=</code><code class="red">"width: 220px;"</code> <code class="blue">id=</code><code class="red">"txt_email"</code>
+  <code class="num">5</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">placeholder=</code><code class="red">"Enter email"</code><code class="green">&gt;</code>
+  <code class="num">6</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_pass"</code><code class="green">&gt;</code>Password<code class="green">&lt;/label&gt;</code>
+  <code class="num">7</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"password"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">8</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">style=</code><code class="red">"width: 220px;"</code> <code class="blue">id=</code><code class="red">"txt_pass"</code>
+  <code class="num">9</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">placeholder=</code><code class="red">"Password"</code> <code class="green">&gt;</code>
+  <code class="num">10</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;button</code> <code class="blue">type=</code><code class="red">"submit"</code> <code class="blue">class=</code><code class="red">"btn btn-default"</code><code class="green">&gt;</code>
+  <code class="num">11</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Submit
+  <code class="num">12</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/button&gt;</code>
+  <code class="num">13</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/form&gt;</code></pre></div>
+</footer>
+<br>
+<h4>ผลลัพธ์ที่ได้ ดังรูป</h4>
+<div class="image-center">
+ <img src="img/5.png" >
+ </div>
+<br><br><br>
+<h4><code class="headkor">Horizontal form</code></h4> <br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เราสามารถจัดกลุ่มของคอนโทรลกับลาเบล (Label)ให้อยู่ในลักษณะของคอลัมน์ โดยการใช้.form-horizontal
+ร่วมกับกริด (Grid) และ .form-group ในการแบ่งคอลัมน์ ตัวอย่าง เช่น</p>
+
+<footer class="container-fluid">
+ <div><pre class="html" >
+  <code class="num">1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;form</code> <code class="blue">class=</code><code class="red">"form-horizontal"</code> <code class="blue">role=</code><code class="red">"form"</code><code class="green">&gt;</code>
+  <code class="num">2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">3</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_email"</code>
+  <code class="num">4</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">class=</code><code class="red">"col-sm-2 control-label"</code><code class="green">&gt;</code>
+  <code class="num">5</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email
+  <code class="num">6</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/label&gt;</code>
+  <code class="num">7</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-sm-5"</code><code class="green">&gt;</code>
+  <code class="num">8</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"email"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">9</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">id=</code><code class="red">"txt_email"</code> <code class="blue">placeholder=</code><code class="red">"Email"</code><code class="green">&gt;</code>
+  <code class="num">10</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">11</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">12</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">13</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_password"</code>
+  <code class="num">14</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">class=</code><code class="red">"col-sm-2 control-label"</code><code class="green">&gt;</code>
+  <code class="num">15</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Password
+  <code class="num">16</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/label&gt;</code>
+  <code class="num">17</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-sm-5"</code><code class="green">&gt;</code>
+  <code class="num">18</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"password"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">19</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">id=</code><code class="red">"txt_password"</code> <code class="blue">placeholder=</code><code class="red">"Password"</code><code class="green">&gt;</code>
+  <code class="num">20</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">21</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">22</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">23</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-sm-offset-2 col-sm-5"</code><code class="green">&gt;</code>
+  <code class="num">24</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"checkbox"</code><code class="green">&gt;</code>
+  <code class="num">25</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label&gt;</code>
+  <code class="num">26</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"checkbox"</code><code class="green">&gt;</code>&nbsp;Remember me
+  <code class="num">27</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/label&gt;</code>
+  <code class="num">28</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">29</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">30</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">31</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">32</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-sm-offset-2 col-sm-5"</code><code class="green">&gt;</code> 
+  <code class="num">33</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="green">&lt;button</code> <code class="blue">type=</code><code class="red">"submit"</code> <code class="blue">class=</code><code class="red">"btn btn-default"</code><code class="green">&gt;</code> 
+  <code class="num">34</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sign in
+  <code class="num">35</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="green">&lt;/button&gt;</code>
+  <code class="num">36</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">37</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">38</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/form&gt;</code>
+
+</pre></div>
+</footer>
+     <br>
+<h4>ผลลัพธ์ที่ได้ ดังรูป</h4>
+<div class="image-center">
+ <img src="img/6.png" style="width:700px;height:300px";>
+ </div>
+<br><br><br>
+
+
+
+
+
+
+
+
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="img/karnz.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Karnz Marii <small>Feb 07, 2017, 9:12 PM</small></h4>
+          <p>ว้าววว!! สุดยอดจริงๆ เป็นความรู้มากๆเลย</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="img/petong.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Petong123 <small>Feb 07, 2017, 8:25 PM</small></h4>
+          <p>พอจะมีเวลาว่างสัก 2-3 ชม. ต่อวันมั้ยครับ...<br>
+          <br>
+          รู้จักใครที่เล่น อินเตอร์เน็ตวันละ 2-3 ชั่วโมงขึ้นไปต่อวันบ้างมั้ยเอ่ย? <br>ตอนนี้ขาดคนช่วยโปรโมทเว็ปให้บริษัท ไม่จำกัดเวลาในการทำงาน<br> รายได้จะขึ้นอยู่กับเวลาในการทำงานจริง ...<br>รับบุคคลอายุ18ปีขึ้นไป.... รายได้จะโอนเข้าบัญชีส่วนตัว<br>
+          ______***รับจำนวนจำกัด***______<br>
+สนใจและต้องการรายละเอียดเพิ่มทิ้งชื่อ+เบอร์โทรศัพไว้นะครับ
+เดี๋ยวเจ้าหน้าที่ติดต่อกลับเพื่อให้ข้อมูลครับ
+</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="img/bai.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Bai'toey  <small>Feb 07, 2017, 8:28 PM</small></h4>
+              <p>สนใจค่ะ ติดต่อได้ทางไหนคะ??</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <center><p>● ►Patinya Rueangrit 58160407◄ ●</p></center>
+</footer>
+
+</body>
+</html>
+

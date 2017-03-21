@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Grid Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #ffff88;
+      height: 100%;
+    }
+    .sidenav1 {
+      background-color: #FAFA96;
+      height: auto;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #ffee44;
+      color: white;
+      padding: 15px;
+    }
+   
+
+
+.num {
+      font-size: 15px; 
+      color: #2E8B57;
+       }
+
+    .green {
+      font-size: 15px;
+      color: #006600;
+      font-weight:bold;
+    }
+
+    .blue {
+      color: #003366;
+      font-size: 15px; 
+    }
+
+    .red {
+      color: #CC0000;
+      font-size: 15px; 
+    }
+
+    .headkor {
+      color: #FF0033;
+      font-size: 18px; 
+      font-weight:bold;
+      text-align:center;
+
+    }
+     .text {
+      color: -;
+      font-size: 18px; 
+    }
+
+    .image-center {
+      text-align: center;
+      font-size: 14px;
+      font-style:italic;
+    }
+
+
+    /* Set Text H */
+    .h1 {
+      color: #0000CD;
+      font-weight:bold;
+      text-align:center;
+     }
+     .h3 {
+      color: #CD1039;
+      font-weight:bold;
+     }
+ 
+    .aa {
+       color: #5a5a5a;
+       font-size: 18px;
+      
+    }
+
+
+    
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Patinya's Blog</h4>
+       <h4>58160407</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/lab03.html">Home</a></li>
+        <li class="active"><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/grid.html">การใช้งาน Grid</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160407/887371/lab03/form.html" >การใช้งาน Form </a></li>
+      
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>WEB PROGRAMMING</small></h4>
+      <hr>
+      <h2>การใช้งาน Grid ใน Bootstrap</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Patinya Rueangrit, Feb 06, 2017.</h5>
+      <h5><span class="label label-danger">Grid</span> <span class="label label-primary">Bootstrap</span></h5><br>
+
+
+       <p><h3>◉ &nbsp; Bootstrap Grids &nbsp; ◉</h3><br>
+           
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จริงๆ แล้วถ้าให้พูดถึง Bootstrap ก็คงจะขาดเรื่องของ Layout หรือ Grid System ไปไม่ได้เลย ในความเป็นจริงเรื่องนี้ควรที่จะทำความเข้าใจก่อนใช้งาน Bootstrap เสียด้วยซ้ำ บทความนี้จะพูดถึงเรื่องของ Grid System และ Box model ของ CSS ด้วย ซึ่งจะทำให้ผู้อ่านเข้าใจ และ ปรับนำมาใช้กับงานได้อย่างง่ายขึ้น ทั้งนี้เองผู้เขียนแนะนำให้เปิดคู่มือของ Bootstrap ดูควบคู่ไปด้วยเช่นกันที่ <a href="http://getbootstrap.com/css/#grid">http://getbootstrap.com/css/#grid</a> บทความนี้เราจะพูดถึง Grid System ของ Bootstrap</p>
+      
+      <br>
+     
+      <h4> ► &nbsp; Grid System คืออะไร ?</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถ้าพูดกันแบบบ้านๆ ทั่วไปเราก็คงจะบอกว่าเป็น Layout ที่คอยควบคุมวัตถุต่างๆ บนหน้าเว็บไซต์ให้แสดงผลได้อย่างถูกต้องตามหลัก box layout ซึ่งจะส่งผลดีต่อการเขียนหนึ่งหน้าเว็บไซต์ แต่สามารถใช้ร่วมกับอุปกรณ์ทุกขนาดหน้าจอ Grid system ของ Bootstrap เอง</p>
+      <br>
+      
+      <h4>►  &nbsp;การใช้งานGrid : </h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gridเป็นเครื่องมือที่ช่วยให้เราสามารถออกแบบเลย์เอาท์เอกสารHTMLได้ดีเหมือนกับการใช้แท็ก tableแต่ความเร็วในการโหลดเอกสารนั้นการใช้ divจะช่วยให้โหลดเอกสารได้เร็วขึ้นนอกจากนั้นยังช่วยให้เราสามารถออกแบบเลย์เอาท์สำหรับมือถือ และบนพีซีได้พร้อมๆ กัน หรือที่เราเรียกว่า ResponsiveWebDesign(RWD)ซึ่งจะช่วยลดระยะเวลาในการพัฒนาได้มากขึ้นระบบGridของ Bootstrapนั้นจะแบ่งหน้าจอออกเป็น12คอลัมน์โดยสามารถกำหนดค่าให้สามารถใช้ได้ทั้งมือถือ แท็บเล็ตหรือพีซีทั่วไปโดยคลาสกำหนดค่าความกว้างของคอลัมน์ดังนี้
+</p>
+<br>
+<br>
+
+<h4><code class="headkor">แสดงความกว้างของหน้าจอในอุปกรณ์แต่ละตัว</code></h4> <br>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>&nbsp;&nbsp;มือถือ</th>
+        <th>แท็บเล็ต</th>
+        <th>&nbsp;ทั่วไป</th>
+        <th>ขนาดใหญ่</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr class="success">
+        <td>ขนาด</td>
+        <td><768px </td>
+        <td> >=768px </td>
+        <td> >=992px </td>
+        <td> >=1200px </td>
+      </tr>
+      <tr class="danger">
+        <td>พื้นที่ใช้งาน</td>
+        <td>&nbsp;อัตโนมัติ</td>
+        <td>&nbsp;750px</td>
+        <td>&nbsp;790px</td>
+        <td>&nbsp;&nbsp;1170px</td>
+      </tr>
+      <tr class="info">
+        <td>ชื่อคลาส</td>
+        <td>.col-xs-*</td>
+        <td>.col-sm-*</td>
+        <td>.col-md-*</td>
+        <td>&nbsp;&nbsp;.col-lg-*</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <br>
+<h4><code class="headkor">ตัวอย่าง Grid</code></h4> <br>
+
+
+
+
+
+
+<footer class="container-fluid">
+ <div><pre class="html" >
+  <code class="num">1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"row"</code><code class="green">&gt;</code>
+  <code class="num">2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">3</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">4</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">5</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">6</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">7</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">8</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">9</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">10</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">11</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">12</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">13</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-1"</code><code class="green">&gt;</code>.col-md-1<code class="green">&lt;/div&gt;</code>
+  <code class="num">14</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code></pre></div>
+  </footer>
+<br>
+<h4>ผลลัพธ์ที่ได้เมื่อรันผ่านเบราเซอร์ ดังรูป</h4>
+<div class="image-center">
+ <img src="img/13.png" >
+ </div>
+<br><br><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จากตัวอย่างเราแบ่งคอลัมน์ออกเป็น 12 คอลัมน์ โดยการใช้คลาส .col-md-1 คลาส col-sm-,
+col-md- และ col-lg- นั้นเมื่อมีคอลัมน์เดียวจะมีขนาด 12 คอลัมน์ เราสามารถยุบรวมคอลัมน์ต่างๆ
+เข้าด้วยกันเพื่อให้ได้เลย์เอาท์ตามที่เราต้องการได้ ดังตัวอย่าง</p>
+
+<footer class="container-fluid">
+ <div><pre class="html" >
+  <code class="num">1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"row"</code><code class="green">&gt;</code>
+  <code class="num">2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-8"</code><code class="green">&gt;</code>.col-md-8<code class="green">&lt;/div&gt;</code>
+  <code class="num">3</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-4"</code><code class="green">&gt;</code>.col-md-4<code class="green">&lt;/div&gt;</code>
+  <code class="num">4</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code></pre></div>
+</footer>
+<br>
+<h4>ผลลัพธ์ที่ได้เมื่อรันผ่านเบราเซอร์ ดังรูป</h4>
+<div class="image-center">
+<img src="img/2.png" style="width:880px;height:95px"; >
+</div>
+<br><br><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การรวมคอลัมน์ ของ Grid นั้น เนื่องจากคอลัมน์ทั้งหมดมี 12 คอลัมน์ การรวมก็คือ เรา
+จะแบ่งเป็นกี่คอลัมน์ก็ตามผลรวมทั้งหมดของคอลัมน์ (คลาส .col-md-xx) จะต้องเท่ากับ 12 จาก
+ตัวอย่าง .col-md-8กับ .col-md-4ผลรวมของตัวเลขคลาส (ตัวท้าย) จะเท่ากับ 12 จะเห็นได้ว่าระบบ
+Grid ของ Bootstrap นั้นจะช่วยให้เราสามารถออกแบบเลย์เอาท์ได้อย่างง่ายขึ้น เหมือนกับการใช้ < table > ที่หลายๆ คนเคยใช้กัน</p>
+<br>
+<h4><code class="headkor">การทำ offsetting ของ Grid</code></h4> <br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การทำ Offsetting นั้นเป็นการเว้นคอลัมน์ที่อยู่ด้านขวาของ Grid ไว้ แล้วข้ามไปสร้างคอลัมน์ถัดไป
+เราจะใช้คลาส .col-md-offset-* ในการลบหรือเว้นช่องว่างของคอลัมน์ ตัวอย่างเช่น</p>
+
+<footer class="container-fluid">
+ <div><pre class="html" >
+  <code class="num">1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"row"</code><code class="green">&gt;</code>
+  <code class="num">2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-4"</code><code class="green">&gt;</code>
+  <code class="num">3</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .col-md-4
+  <code class="num">4</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">5</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"col-md-4 col-md-offset-4"</code><code class="green">&gt;</code>
+  <code class="num">6</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .col-md-4 .col-md-offset-4
+  <code class="num">7</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">8</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code></pre></div>
+</footer>
+<br>
+<h4>ผลลัพธ์ที่ได้เมื่อรันผ่านเบราเซอร์ ดังรูป</h4>
+<div class="image-center">
+<img src="img/3.png" >
+</div>
+
+
+
+      <br>
+      <br>
+    
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="img/karnz.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Karnz Marii <small>Feb 07, 2017, 9:12 PM</small></h4>
+          <p>ว้าววว!! สุดยอดจริงๆ เป็นความรู้มากๆเลย</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="img/petong.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Petong123 <small>Feb 07, 2017, 8:25 PM</small></h4>
+          <p>พอจะมีเวลาว่างสัก 2-3 ชม. ต่อวันมั้ยครับ...<br>
+          <br>
+          รู้จักใครที่เล่น อินเตอร์เน็ตวันละ 2-3 ชั่วโมงขึ้นไปต่อวันบ้างมั้ยเอ่ย? <br>ตอนนี้ขาดคนช่วยโปรโมทเว็ปให้บริษัท ไม่จำกัดเวลาในการทำงาน<br> รายได้จะขึ้นอยู่กับเวลาในการทำงานจริง ...<br>รับบุคคลอายุ18ปีขึ้นไป.... รายได้จะโอนเข้าบัญชีส่วนตัว<br>
+          ______***รับจำนวนจำกัด***______<br>
+สนใจและต้องการรายละเอียดเพิ่มทิ้งชื่อ+เบอร์โทรศัพไว้นะครับ
+เดี๋ยวเจ้าหน้าที่ติดต่อกลับเพื่อให้ข้อมูลครับ
+</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="img/bai.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Bai'toey  <small>Feb 07, 2017, 8:28 PM</small></h4>
+              <p>สนใจค่ะ ติดต่อได้ทางไหนคะ??</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <center><p>● ►Patinya Rueangrit 58160407◄ ●</p></center>
+</footer>
+
+</body>
+</html>
+

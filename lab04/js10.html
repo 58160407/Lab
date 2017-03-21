@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Change inline text Example</title>
+    <script language="JavaScript">
+        var AR = new Array();
+        AR[0] = "Message1";
+        AR[1] = "Message2";
+        AR[2] = "Message3";
+        var i = 0;
+
+        function next() {
+            i = (++i) % AR.length;
+            document.getElementById("click").innerHTML = AR[i];
+        }
+    </script>
+</head>
+
+<body>
+    Click on the middle section to have it change what it says.<br> Text-1
+    <hr>
+    <div onclick="next()" id="click">
+        DEFAULT
+    </div>
+    <hr> Text-2
+</body>
+
+</html>
